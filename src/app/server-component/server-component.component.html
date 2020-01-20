@@ -1,0 +1,6 @@
+<input type="text" [(ngModel)]="serverName"><br>
+<button type="button" class="btn btn-primary" (click) = "onAdd()">Add server</button>
+<button type="button" class="btn btn-primary" [disabled]="!isAdded" (click) = "onDelete()">Delete server</button><br><br>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor = "let server of serverList">{{server}}</li>
+</ul>
